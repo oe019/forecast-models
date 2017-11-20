@@ -1,0 +1,26 @@
+﻿
+@model Object
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+<h2>Import</h2>
+
+<div class="col-lg-12">
+
+    <div id="dvImportSegments" class="fileupload">
+        <fieldset>
+            <legend>Upload 4 column Data Set (Product-Store-Date-Quantity) in CSV Format</legend>
+            <form action="/Home/UpLoadAndPrepareRespond" method="post" enctype="multipart/form-data">
+                <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" />
+                <label style="font-size:larger">Generate 4 Column (Product-TotalSale-WeeklyAvgSale-WeeklyStDev) Result List for Products </label>
+                <input type="submit" name="InitiateService" value="Upload" class="btn-info" style="padding:20px" />
+            </form>
+        </fieldset>
+    </div>
+
+</div>
+<div class="col-lg-12">
+    <label style="font-size:small">This may take a few minutes</label>
+</div>
